@@ -1,0 +1,141 @@
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*definições gerais*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/*xx CSS reset xx*/
+
+	*{margin: 0; 
+	 padding: 0; 
+	 box-sizing: border-box;}
+	 
+/*xxxxxxxxxxxxxxxx*/
+
+	.botaoMenu {
+		height: 30px;
+		width:  35px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.barra1, .barra2, .barra3 {
+		border-top: 6px solid black;
+		border-radius: 10px;
+	}
+
+	.barra1, .barra2 {margin-bottom: 6px;}
+
+    .barra1{position: relative;}
+
+	.rotacao {
+	animation-name: animarButton;
+	animation-duration: 1s;
+	animation-fill-mode: forwards; 
+	}
+
+	@keyframes animarButton {
+		from{ transform: rotate(0deg);}
+		to  { transform: rotate(180deg);}
+	}
+
+	.girabarra1 {
+		animation-name: girarBarraUm;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes girarBarraUm {
+		from {transform: rotate(0deg);
+			  margin-bottom: 6px;
+			  position: relative;
+    		  top: 0;}
+
+		to   {transform: rotate(45deg);
+			  margin-bottom: 0px;
+			  position: relative;
+    		  top: 12px;}
+	}
+
+	.sumirBarraCentral {
+	animation-name: sumirBarra;	
+	animation-duration: 0.3s;	
+	animation-fill-mode: forwards;
+	}
+
+	@keyframes sumirBarra {
+		0%   {border: 1px solid black;
+			  display: block;}
+	 	100% {border: 0px;
+	 		  display: none;}
+	}
+
+	.girabarra2 {
+		animation-name: girarBarraDois;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes girarBarraDois {
+		from {transform: rotate(0deg);
+			  margin-bottom: 6px;}
+		to   {transform: rotate(-45deg);
+			  margin-bottom: 0px;}
+	}
+
+	/*movimento inverso no menu de barra*/
+
+	.rotacaoInversa {
+	animation-name: animarButtonInverso;
+	animation-duration: 1s;
+	animation-fill-mode: forwards; 
+	}
+
+	@keyframes animarButtonInverso {
+		from{ transform: rotate(0deg);}
+		to  { transform: rotate(180deg);}
+	}
+
+	.girabarra1Inversa {
+		animation-name: girarBarraUmInversa;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes girarBarraUmInversa {
+		from   {transform: rotate(45deg);
+			  margin-bottom: 0px;
+			  position: relative;
+    		  top: 12px;}
+
+		to {transform: rotate(0deg);
+			  margin-bottom: 6px;
+			  position: relative;
+    		  top: 0;}
+
+	}
+
+	.aparecerBarraCentral {
+	animation-name: aparecerBarra;	
+	animation-duration: 0.3s;	
+	animation-fill-mode: forwards;
+	}
+
+	@keyframes aparecerBarra {
+	 	from {border-top: 0px;
+	 		  display: none;}
+
+		to   {border-top: 6px solid black;
+			  display: block;}
+	}
+
+	.girabarra2Inversa {
+		animation-name: girarBarraDoisInverso;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes girarBarraDoisInverso {
+		from   {transform: rotate(-45deg);
+			  	margin-bottom: 0px;}
+		to 		{transform: rotate(0deg);
+			 	 margin-bottom: 6px;}
+	}
